@@ -124,6 +124,20 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#ce1256', text: '4+'},
                 ]
             },
+        },
+        {
+            mapStyle: 'size_floor_area_ground',
+            legend: {
+                title: 'Ground floor area',
+                elements: [
+                    { color: '#f7f4f9', text: '0 - 100'},
+                    { color: '#e7e1ef', text: '100 - 200'},
+                    { color: '#d4b9da', text: '200 - 300'},
+                    { color: '#c994c7', text: '300 - 400'},
+                    { color: '#df65b0', text: '400 - 500'},
+                    { color: '#e7298a', text: '500 +'},
+                ]
+            },
         }
     ],
     [Category.Team]: [{

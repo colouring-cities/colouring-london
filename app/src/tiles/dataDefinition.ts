@@ -89,7 +89,17 @@ const LAYER_QUERIES = {
         WHERE
             size_storeys_basement IS NOT NULL
             AND
-            size_storeys_basement != 0`,            
+            size_storeys_basement != 0`,  
+    size_floor_area_ground: `
+        SELECT
+            geometry_id,
+            size_floor_area_ground AS size_floor_area_ground
+        FROM
+            buildings
+        WHERE
+            size_floor_area_ground IS NOT NULL
+            AND
+            size_floor_area_ground != 0`,           
     construction_core_material: `
         SELECT
             geometry_id,
