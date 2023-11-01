@@ -62,6 +62,24 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             size_height_apex IS NOT NULL`,
+    size_total_floors: `
+        SELECT
+            geometry_id,
+            (size_storeys_core + size_storeys_attic + size_storeys_basement) AS size_total_floors
+        FROM
+            buildings
+        WHERE
+            size_storeys_core IS NOT NULL 
+            AND
+            size_storeys_attic IS NOT NULL 
+            AND
+            size_storeys_basement IS NOT NULL 
+            AND
+            size_storeys_core != 0
+            AND
+            size_storeys_attic != 0
+            AND
+            size_storeys_basement != 0`,
     construction_core_material: `
         SELECT
             geometry_id,

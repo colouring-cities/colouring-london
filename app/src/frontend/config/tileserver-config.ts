@@ -6,6 +6,7 @@
 export type BuildingMapTileset = 
     'date_year' | 
     'size_height' |
+    'size_total_floors' |
     'construction_core_material' |
     'construction_structural_system' |
     'construction_foundation' |
