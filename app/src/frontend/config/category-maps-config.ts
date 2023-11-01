@@ -112,6 +112,18 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#980043', text: '35 +'}
                 ]
             },
+        },
+        {
+            mapStyle: 'size_storeys_basement',
+            legend: {
+                title: 'Floors below ground level',
+                elements: [
+                    { color: '#f7f4f9', text: '1'},
+                    { color: '#d4b9da', text: '2'},
+                    { color: '#df65b0', text: '3'},
+                    { color: '#ce1256', text: '4+'},
+                ]
+            },
         }
     ],
     [Category.Team]: [{
