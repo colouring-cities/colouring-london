@@ -80,7 +80,7 @@ const LAYER_QUERIES = {
             size_storeys_attic != 0
             AND
             size_storeys_basement != 0`,
-            size_storeys_basement: `
+    size_storeys_basement: `
         SELECT
             geometry_id,
             size_storeys_basement AS size_storeys_basement
