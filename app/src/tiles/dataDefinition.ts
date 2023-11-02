@@ -91,15 +91,15 @@ const LAYER_QUERIES = {
             AND
             size_storeys_basement != 0`,  
     size_floor_area_ground: `
-        SELECT
-            geometry_id,
-            size_floor_area_ground AS size_floor_area_ground
-        FROM
-            buildings
-        WHERE
-            size_floor_area_ground IS NOT NULL
-            AND
-            size_floor_area_ground != 0`,           
+            SELECT
+                geometry_id,
+                size_floor_area_ground AS size_floor_area_ground
+            FROM
+                buildings
+            WHERE
+                size_floor_area_ground IS NOT NULL
+                AND
+                size_floor_area_ground != 0`,           
     construction_core_material: `
         SELECT
             geometry_id,
@@ -374,7 +374,7 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE typology_style_period IS NOT NULL`,
-        typology_dynamic_classification: `
+    typology_dynamic_classification: `
         SELECT
             geometry_id,
             typology_dynamic_classification
