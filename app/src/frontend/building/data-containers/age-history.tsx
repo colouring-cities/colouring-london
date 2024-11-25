@@ -68,6 +68,22 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
         props.onMapColourScale('date_year');
     }
 
+    const switchToFootprintIssuesStyle = (e) => {
+        e.preventDefault();
+
+        if (historicData === 'enabled') {
+            historicDataSwitchOnClick(e);
+        }
+        if (historicMap === 'enabled') {
+            historicMapSwitchOnClick(e);
+        }
+        if (historicMapLeicestershire === 'enabled') {
+            historicMapLeicestershireSwitchOnClick(e);
+        }
+
+        props.onMapColourScale('building_footprint_issues');
+    }
+
     const switchToStylePeriodMapStyle = (e) => {
         e.preventDefault();
         props.onMapColourScale('typology_style_period')
@@ -601,6 +617,13 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 />
             </DataEntryGroup>
             <DataEntryGroup name="Building Footprint Issues" collapsed={subcat==null || subcat!="4"}>
+                {(props.mapColourScale != "building_footprint_issues") ? 
+                        <button className={`map-switcher-inline enabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToFootprintIssuesStyle}>
+                            Click to show footprint issues.
+                        </button>
+                :
+                    <></>
+                }
                 <MultiDataEntry
                     title={dataFields.building_footprint_issues.title}
                     slug="building_footprint_issues"
