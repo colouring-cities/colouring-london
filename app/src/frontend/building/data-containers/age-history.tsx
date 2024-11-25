@@ -600,7 +600,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     isUrl={true}
                 />
             </DataEntryGroup>
-            <DataEntryGroup name="Building Footprint Error" collapsed={subcat==null || subcat!="4"}>
+            <DataEntryGroup name="Building Footprint Issues" collapsed={subcat==null || subcat!="4"}>
                 <MultiDataEntry
                     title={dataFields.building_footprint_issues.title}
                     slug="building_footprint_issues"
