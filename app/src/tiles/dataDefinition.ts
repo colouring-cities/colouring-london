@@ -238,6 +238,13 @@ const LAYER_QUERIES = {
             buildings
         WHERE
         survival_status IS NOT NULL`,
+    empty_map: `
+        SELECT
+            geometry_id,
+            survival_status
+        FROM
+            buildings
+         WHERE FALSE`,
     survival_source: `
         SELECT
             geometry_id,

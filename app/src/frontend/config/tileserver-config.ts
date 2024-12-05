@@ -46,6 +46,7 @@ export type BuildingMapTileset =
     'team' |
     'team_known_designer' |
     'survival_status'|
+    'empty_map'|
     'typology_classification'|
     'typology_style_period' |
     'typology_dynamic_classification'|

@@ -102,6 +102,15 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 ]
             }
         },
+        {
+            mapStyle: 'empty_map',
+            legend: {
+                disclaimer: ' ',
+                title: '---',
+                elements: [
+                ]
+            }
+        },
     ],
     [Category.ConstructionDesign]: [
         {
